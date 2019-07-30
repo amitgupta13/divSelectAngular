@@ -1,0 +1,13 @@
+<!-- <div
+  *ngFor="let choice of choices; let i = index"
+  onClickDirective
+  class="type1"
+> -->
+<div
+  *ngFor="let choice of choices; let i = index"
+  [ngStyle]="getMyStyles(i)"
+  class="type1"
+  (click)="onClick(i)"
+>
+  {{ choice.choice }}
+</div>
